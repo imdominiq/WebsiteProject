@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <title>Dominik Kaminski - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <nav class="navbar navbar-expand-xxl navbar-light bg-light">
+                    <div class="container">
+                        <div class="col">
+                            <a class="navbar-brand" href="index.html">Dominik Kaminski</a>
+                            <div>
+                            <div>
+                                <p class="col no-margin-bottom">Student IT</p>
+                                <p class="col no-margin-bottom">#OpenToWork</p>
+                            </div>    
+                        </div>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"><img class="bar-icon" src="images/bar-icon.png"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav " >
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://github.com/imdominiq?tab=repositories" target="_blank">
+                                    <img class="navbar-icon" src="images/25231.png">
+                                    <span>Github</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="https://www.linkedin.com/in/kaminskidominik/" target="_blank">
+                                    <img class="navbar-icon" src="images/linkedin.png">
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="CV-Dominik_Kaminski.pdf" download="Dominik_Kaminski_CV.pdf">
+                                    <img class="navbar-icon" src="images/cv.png">
+                                    <span>Pobierz CV</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="kontakt.html">
+                                    <img class="navbar-icon" src="images/contact.png">
+                                    <span>Kontakt</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="flex-container">
+            <section>
+                <h2>O mnie</h2>
+                <p class="half-width">Jestem studentem drugiego roku na Collegium Da Vinci, gdzie studiuję informatykę. Członek koła studenckiego ,,Google Developer Student Club”. Lubię wyzwania i zdobywanie nowych umiejętności. Pasjonat astronomii i fotograf nocnego nieba.</p>
+            </section>
+            
+            
+            <section>
+                <h2>Oferta</h2>
+                <div class="service-calculator">
+                    <form id="serviceForm">
+                        <div class="mb-3">
+                            <label for="graphicHours" class="form-label">Godziny graficzne</label>
+                            <input type="number" class="form-control" id="graphicHours" placeholder="Podaj liczbę godzin">
+                        </div>
+                        <div class="mb-3">
+                            <label for="programmingHours" class="form-label">Godziny programistyczne</label>
+                            <input type="number" class="form-control" id="programmingHours" placeholder="Podaj liczbę godzin">
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="calculateTotal()">Oblicz</button>
+                    </form>
+                    <p id="totalCost" class="form-label mt-3"></p>
+                </div>
+            </section>
+        </div>
+
+        <section>
+            <h2>Projekty</h2>
+            <ul class="projects">
+                <div class="web" onclick="window.location.href='web_portfolio.html';">
+                    <div class="blok">
+                        <a href="web_portfolio.html">Website portfolio</a>
+                        <span>01.2024</span>
+                    </div>
+                    <div class="media">
+                        <img class="project-image-web" src="images/web.png">
+                    </div>
+                </div>
+
+                <div class="eqai" onclick="window.location.href='eqai.html';">
+                    <div class="media">
+                        <img class="project-image-eq" src="images/eq.png">
+                    </div>
+                    <div class="blok">
+                        <a href="eqai.html">EarthQuakeAI - In progress </a>
+                        <span>01.2024</span>
+                    </div>
+                </div>
+
+                <div class="ballgame" onclick="window.location.href='ballgame.html';">
+                    <div class="blok">
+                        <a href="ballgame.html">Ball Game</a>
+                        <span>06.2023</span>
+                    </div>
+                    <div class="media">
+                        <img class="project-image-ball" src="images/ballgame.png">
+                    </div>
+                </div>
+
+                <div class="snakeai" onclick="window.location.href='snakeai.html';">
+                    <div class="media">
+                        <img class="project-image-snake" src="images/snakeai.png">
+                    </div>
+                    <div class="blok">
+                        <a href="snakeai.html">SnakeAI</a>
+                        <span>06.2023</span>
+                    </div>
+                </div>
+
+                <div class="calculator" onclick="window.location.href='calculator.html';">
+                    <div class="blok">
+                        <a href="calculator.html">Simple Calculator with Menu</a>
+                        <span>06.2023</span>
+                    </div>
+                    <div class="media">
+                        <img class="project-image-cal" src="images/calculator.png">
+                    </div>
+                </div>
+
+                <div class="dungeon" onclick="window.location.href='dungeon.html';">
+                    <div class="media">
+                        <img class="project-image-dungeon" src="images/dungeon.jpg">
+                    </div>
+                    <div class="blok">
+                        <a href="dungeon.html">Dungeon</a>
+                        <span>06.2023</span>
+                    </div>
+                </div>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        });
+        function calculateTotal() {
+        var graphicHours = document.getElementById('graphicHours').value;
+        var programmingHours = document.getElementById('programmingHours').value;
+        var graphicRate = 30; 
+        var programmingRate = 40; 
+
+        var total = (graphicHours * graphicRate) + (programmingHours * programmingRate);
+        document.getElementById('totalCost').innerText = 'Całkowity koszt: ' + total + ' zł';
+    }
+    </script>
+</body>
+
+</html>
